@@ -57,6 +57,8 @@ function enableCam(event) {
   });
 }
 
+var children = [];
+
 function predictWebcam() {
   // Now let's start classifying a frame in the stream.
   model.detect(video).then(function (predictions) {
@@ -112,5 +114,3 @@ cocoSsd.load().then(function (loadedModel) {
   // Show demo section now model is ready to use.
   demosSection.classList.remove('invisible');
 });
-
-var children = [];
